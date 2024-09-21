@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Now Playing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="player-container">
+        <h1>Now Playing</h1>
+        <div id="song-info">
+            <p id="song-title">No song playing...</p>
+            <audio controls id="audio-player">
+                <source id="audio-source" src="" type="audio/mp3">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.1/firebase-storage.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
