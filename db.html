@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Kids Bank</title>
+    <link rel="stylesheet" href="./css/db.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-DyZv5nY4A+V6/DeIkG5zB9eFIM4E7IVWo4NQm+5ITZyf8sl4B+ipFlR2IsH/1tu" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Navbar with sign out -->
+    <header>
+        <div class="navbar">
+            <h1>Kids Bank Dashboard</h1>
+            <button id="signOutButton" class="sign-out-btn">
+                <i class="fas fa-sign-out-alt"></i> Sign Out
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Image Section -->
+    <div class="hero-image">
+        <img src="./images/hero.png" alt="Kids Banking Hero" />
+    </div>
+
+    <div class="dashboard-container">
+        <div class="profile-container">
+            <div class="profile-pic">
+                <img id="profileImage" src="images/default.png" alt="Profile Picture">
+                <label for="uploadProfilePhoto" class="upload-btn">
+                    <i class="fas fa-camera"></i>
+                </label>
+                <input type="file" id="uploadProfilePhoto" accept="image/*" style="display:none;">
+            </div>
+            <h2 id="greetingMessage"></h2>
+        </div>
+        
+        <div class="dashboard-content">
+            <img src="images/kids_bank_dashboard.png" alt="Kids Bank Dashboard">
+        </div>
+    </div>
+
+    <!-- Firebase and JavaScript logic -->
+    <script type="module" src="./js/db.js"></script>
+</body>
+</html>

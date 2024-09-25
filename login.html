@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Kids Bank</title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="./images/logo.png" alt="App Logo" class="logo">
+            <h1>Kids Bank</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="form-container">
+            <!-- Sign In Form -->
+            <div id="sign-in-form" class="form">
+                <h2>Welcome Back!</h2>
+                <label for="loginEmail">Email</label>
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button id="togglePassword">Show</button> <!-- Toggle button -->
+                <button id="loginButton">Sign In</button>
+                <div id="loginError" class="error-message" aria-live="polite"></div>
+                <p><a href="#" id="forgotPassword">Forgot Password?</a></p>
+                <p>Don't have an account? <a href="#" id="showSignup">Sign up</a></p>
+            </div>
+
+            <!-- Sign Up Form -->
+            <div id="sign-up-form" class="form hidden">
+                <h2>Create Account</h2>
+                <label for="signupFullName">Full Name</label>
+                <input type="text" id="signupFullName" placeholder="Full Name" required>
+                <label for="signupEmail">Email</label>
+                <input type="email" id="signupEmail" placeholder="Email" required>
+                <label for="signupPassword">Password (8 characters minimum)</label>
+                <input type="password" id="signupPassword" placeholder="Password" required>
+                <button id="toggleSignupPassword">Show</button> <!-- Toggle button -->
+                <label for="profilePhoto">Profile Photo (Max 2MB)</label>
+                <input type="file" id="profilePhoto" accept="image/*" required>
+                <button id="signupButton">Sign Up</button>
+                <div id="signupError" class="error-message" aria-live="polite"></div>
+                <p>Already have an account? <a href="#" id="showSignin">Sign in</a></p>
+            </div>
+
+            <!-- Loading Spinner -->
+            <div id="loadingSpinner" class="spinner hidden">
+                <p>Loading...</p>
+            </div>
+        </div>
+    </div>
+
+   
+
+    <!-- Import JavaScript file -->
+    <script type="module" src="./js/login.js"></script>
+</body>
+
+</html>
