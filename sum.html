@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary | Petty Cash Book</title>
+    <link rel="stylesheet" href="./css/sum.css">
+    
+    <!-- Correct jsPDF UMD bundle -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.13/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+    <!-- HTML structure -->
+    <header>
+        <div class="navbar">
+            <div class="logo-container">
+                <img src="./images/logo.png" alt="Logo" class="logo">
+                <h1>Petty Cash Book Summary</h1>
+            </div>
+            <div class="signout-container">
+                <button id="signOutButton"><i class="fas fa-sign-out-alt"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="summary-container">
+        <h2 id="monthName"></h2>
+
+        <div class="summary-results">
+            <h3>Total Income: <span id="totalIncome" class="green"></span></h3>
+            <h3>Total Spend: <span id="totalSpend" class="red"></span></h3>
+            <h3>Net Amount: <span id="netAmount"></span></h3>
+        </div>
+
+        <button id="exportPdfButton">Export as PDF</button>
+
+        <h3>Transactions</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Type</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="transactionTableBody">
+                <!-- Transactions will be dynamically added here -->
+            </tbody>
+        </table>
+
+        <div id="monthNav" class="horizontal-scroll">
+            <!-- Previous months will be dynamically added here -->
+        </div>
+    </div>
+
+    <!-- Make sure your JS file loads after the jsPDF script -->
+    <script type="module" src="./js/sum.js"></script>
+</body>
+</html>

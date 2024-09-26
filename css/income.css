@@ -1,0 +1,61 @@
+/* Enhanced styles for income.html */
+
+/* Body and overall padding */
+body {
+    padding: 20px;
+    background-color: #f4f4f4; /* Light background for better contrast */
+}
+
+/* Heading styles */
+h2 {
+    color: #28a745; /* Emphasis on green for income section */
+    font-size: 2em;
+    margin-bottom: 20px; /* Space below heading */
+    text-align: center; /* Center align for aesthetics */
+}
+
+/* Transaction table styles */
+.transaction-table {
+    margin-top: 20px;
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensures rounded corners are respected */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    background-color: white; /* White background for table */
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove gaps between cells */
+}
+
+th, td {
+    padding: 15px; /* Increased padding for better touch targets */
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Light border for separation */
+}
+
+th {
+    background-color: #28a745; /* Green header for contrast */
+    color: white;
+    font-weight: bold; /* Bold for emphasis */
+}
+
+tr:hover {
+    background-color: #d4edda; /* Light green background on hover */
+}
+
+/* No transactions message styling */
+.transaction-table td {
+    text-align: center;
+    color: #666;
+    font-style: italic; /* Italicized text for differentiation */
+}
+
+/* Total amount display */
+.total-amount {
+    font-size: 1.5em; /* Larger text for visibility */
+    color: #28a745; /* Consistent color with headings */
+    text-align: center; /* Center align */
+    margin: 20px 0; /* Margin for separation */
+}

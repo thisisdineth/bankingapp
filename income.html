@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Transactions | Petty Cash Book</title>
+    <link rel="stylesheet" href="./css/income.css">
+    <link rel="stylesheet" href="./css/db.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo-container">
+                <img src="./images/logo.png" alt="Logo" class="logo">
+                <h1>Petty Cash Book</h1>
+            </div>
+            <div class="signout-container">
+                <button id="signOutButton"><i class="fas fa-sign-out-alt"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero-image">
+        <h2>Your Income Transactions</h2>
+        <div class="total-income">
+            <h3>Total Income: <span id="totalIncomeAmount">0</span></h3>
+        </div>
+    </div>
+
+    <div class="transaction-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="incomeTableBody">
+                <!-- Income transactions will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script type="module" src="./js/income.js"></script>
+</body>
+</html>
