@@ -1,9 +1,14 @@
 /* General styling */
+* {
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f9;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Header styling */
@@ -91,6 +96,7 @@ header {
     position: relative;
     width: 100%;
     height: 300px;
+    overflow: hidden; /* Prevent overflow */
 }
 
 .hero-image img {
@@ -114,6 +120,7 @@ header {
     height: 120px;
     margin: 0 auto;
 }
+
 .profile-pic img {
     width: 100%;
     height: 100%;
@@ -175,6 +182,7 @@ h2 {
         font-size: 16px;
         padding: 8px 15px;
     }
+    
     #signOutButton {
         background-color: #e74c3c;
         color: white;
