@@ -8,28 +8,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <!-- Navbar with logo, page name, and hamburger menu -->
+    <!-- Navbar with logo and page name -->
     <header>
         <div class="navbar">
             <div class="logo-container">
                 <img src="./images/logo.png" alt="Logo" class="logo">
                 <h1>Petty Cash Book</h1>
             </div>
-            <div class="menu-toggle">
-                <i class="fas fa-bars" id="menuIcon"></i>
+            <!-- Sign Out button -->
+            <div class="signout-container">
+                <button id="signOutButton"><i class="fas fa-sign-out-alt"></i></button>
             </div>
         </div>
-
-        <!-- Expandable Menu -->
-        <nav id="menu" class="hidden">
-            <ul>
-                <li><a href="incomes.html">Incomes</a></li>
-                <li><a href="spends.html">Spends</a></li>
-                <li><a href="summary.html">Summary</a></li>
-                <li><button id="signOutButton"><i class="fas fa-sign-out-alt"></i> Sign Out</button></li>
-            </ul>
-        </nav>
     </header>
+
+
 
     <!-- Hero Image Section -->
     <div class="hero-image">
@@ -45,6 +38,14 @@
             <h2 id="greetingMessage">Good Day, You are awesome</h2>
         </div>
     </div>
+        <!-- Main Navigation Section -->
+        <nav class="dashboard-nav">
+            <ul>
+                <li><a href="incomes.html" class="nav-item">Incomes</a></li>
+                <li><a href="spends.html" class="nav-item">Spends</a></li>
+                <li><a href="summary.html" class="nav-item">Summary</a></li>
+            </ul>
+        </nav>
 
     <!-- Dashboard Content -->
     <div class="dashboard-content">

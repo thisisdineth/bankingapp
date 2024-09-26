@@ -22,8 +22,6 @@ const signOutButton = document.getElementById('signOutButton');
 const profileImage = document.getElementById('profileImage');
 const uploadProfilePhoto = document.getElementById('uploadProfilePhoto');
 const greetingMessage = document.getElementById('greetingMessage');
-const menuIcon = document.getElementById('menuIcon');
-const menu = document.getElementById('menu');
 
 // Check user authentication
 onAuthStateChanged(auth, user => {
@@ -83,11 +81,4 @@ uploadProfilePhoto.addEventListener('change', async function () {
 signOutButton.addEventListener('click', async function () {
     await signOut(auth);
     window.location.href = 'login.html'; // Redirect to login page after signing out
-});
-
-// Toggle the hamburger menu on click
-menuIcon.addEventListener('click', function () {
-    menu.classList.toggle('hidden'); // Toggle visibility of the menu
-    menuIcon.classList.toggle('fa-bars');
-    menuIcon.classList.toggle('fa-times'); // Change icon to X
 });
