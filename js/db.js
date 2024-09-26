@@ -22,11 +22,13 @@ const signOutButton = document.getElementById('signOutButton');
 const profileImage = document.getElementById('profileImage');
 const uploadProfilePhoto = document.getElementById('uploadProfilePhoto');
 const greetingMessage = document.getElementById('greetingMessage');
+const menuIcon = document.getElementById('menuIcon');
+const menu = document.getElementById('menu');
 
 // Check user authentication
 onAuthStateChanged(auth, user => {
     if (user) {
-        // User is signed in
+        // User is signed in, show greeting and load profile
         showGreeting(user.displayName);
         loadProfilePhoto(user);
     } else {
@@ -35,7 +37,7 @@ onAuthStateChanged(auth, user => {
     }
 });
 
-// Greeting message based on time of day
+// Function to display greeting message based on the time of day
 function showGreeting(userName) {
     const hours = new Date().getHours();
     let greeting = 'Hello';
@@ -48,19 +50,20 @@ function showGreeting(userName) {
         greeting = 'Good Evening';
     }
 
+    // Show actual user name, or 'User' if name is missing
     greetingMessage.textContent = `${greeting}, ${userName || 'User'}!`;
 }
 
-// Load profile photo (default if none exists)
+// Function to load the user's profile photo
 function loadProfilePhoto(user) {
     if (user.photoURL) {
         profileImage.src = user.photoURL;
     } else {
-        profileImage.src = 'images/default.png';
+        profileImage.src = 'images/default.png'; // Default profile image if none
     }
 }
 
-// Profile photo upload
+// Handle profile photo upload and update
 uploadProfilePhoto.addEventListener('change', async function () {
     const file = uploadProfilePhoto.files[0];
 
@@ -71,7 +74,7 @@ uploadProfilePhoto.addEventListener('change', async function () {
 
         // Update user profile with new photo
         await updateProfile(auth.currentUser, { photoURL: downloadURL });
-        profileImage.src = downloadURL;
+        profileImage.src = downloadURL; // Update the profile image on the page
         alert('Profile photo updated!');
     }
 });
@@ -79,6 +82,12 @@ uploadProfilePhoto.addEventListener('change', async function () {
 // Sign out functionality
 signOutButton.addEventListener('click', async function () {
     await signOut(auth);
-    window.location.href = 'login.html';
+    window.location.href = 'login.html'; // Redirect to login page after signing out
 });
 
+// Toggle the hamburger menu on click
+menuIcon.addEventListener('click', function () {
+    menu.classList.toggle('hidden'); // Toggle visibility of the menu
+    menuIcon.classList.toggle('fa-bars');
+    menuIcon.classList.toggle('fa-times'); // Change icon to X
+});

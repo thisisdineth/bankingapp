@@ -3,27 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | Kids Bank</title>
+    <title>Dashboard | Petty Cash Book</title>
     <link rel="stylesheet" href="./css/db.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-DyZv5nY4A+V6/DeIkG5zB9eFIM4E7IVWo4NQm+5ITZyf8sl4B+ipFlR2IsH/1tu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <!-- Navbar with sign out -->
+    <!-- Navbar with logo, page name, and hamburger menu -->
     <header>
         <div class="navbar">
-            <h1>Kids Bank Dashboard</h1>
-            <button id="signOutButton" class="sign-out-btn">
-                <i class="fas fa-sign-out-alt"></i> Sign Out
-            </button>
+            <div class="logo-container">
+                <img src="./images/logo.png" alt="Logo" class="logo">
+                <h1>Petty Cash Book</h1>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars" id="menuIcon"></i>
+            </div>
         </div>
+
+        <!-- Expandable Menu -->
+        <nav id="menu" class="hidden">
+            <ul>
+                <li><a href="incomes.html">Incomes</a></li>
+                <li><a href="spends.html">Spends</a></li>
+                <li><a href="summary.html">Summary</a></li>
+                <li><button id="signOutButton"><i class="fas fa-sign-out-alt"></i> Sign Out</button></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Hero Image Section -->
     <div class="hero-image">
-        <img src="./images/hero.png" alt="Kids Banking Hero" />
-    </div>
-
-    <div class="dashboard-container">
+        <img src="./images/hero.png" alt="Hero Image" />
         <div class="profile-container">
             <div class="profile-pic">
                 <img id="profileImage" src="images/default.png" alt="Profile Picture">
@@ -32,15 +42,16 @@
                 </label>
                 <input type="file" id="uploadProfilePhoto" accept="image/*" style="display:none;">
             </div>
-            <h2 id="greetingMessage"></h2>
-        </div>
-        
-        <div class="dashboard-content">
-            <img src="images/kids_bank_dashboard.png" alt="Kids Bank Dashboard">
+            <h2 id="greetingMessage">Good Day, User!</h2>
         </div>
     </div>
 
-    <!-- Firebase and JavaScript logic -->
+    <!-- Dashboard Content -->
+    <div class="dashboard-content">
+        <img src="images/kids_bank_dashboard.png" alt="Kids Bank Dashboard">
+    </div>
+
+    <!-- JavaScript -->
     <script type="module" src="./js/db.js"></script>
 </body>
 </html>
