@@ -81,3 +81,4 @@ signOutButton.addEventListener('click', async function () {
     await signOut(auth);
     window.location.href = 'login.html';
 });
+
