@@ -155,7 +155,131 @@ h2 {
     max-width: 600px;
     border-radius: 10px;
 }
+/* Transaction form styling */
+.transaction-form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+.transaction-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #2c3e50;
+}
+
+.transaction-form label {
+    font-size: 14px;
+    color: #2c3e50;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.transaction-form input,
+.transaction-form select,
+.transaction-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #bdc3c7;
+    font-size: 14px;
+}
+
+.transaction-form input:focus,
+.transaction-form select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.transaction-form button {
+    background-color: #3498db;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.transaction-form button:hover {
+    background-color: #2980b9;
+}
+
+/* Search bar styling */
+.search-container {
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: 1px solid #bdc3c7;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+#searchInput:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Table styling */
+.transaction-table {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: white;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.transaction-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.transaction-table thead {
+    background-color: #3498db;
+    color: white;
+    font-size: 16px;
+}
+
+.transaction-table thead th {
+    padding: 15px;
+    text-align: left;
+}
+
+.transaction-table tbody td {
+    padding: 15px;
+    border-bottom: 1px solid #ecf0f1;
+    font-size: 14px;
+    color: #2c3e50;
+}
+
+.transaction-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.transaction-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.transaction-table tbody td:last-child {
+    text-align: right;
+}
+
+.transaction-table tbody tr td {
+    vertical-align: middle;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .profile-pic {
@@ -194,4 +318,27 @@ h2 {
         max-width: 5px;
         cursor: pointer;
     }
+    .transaction-form {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .transaction-form input,
+    .transaction-form select,
+    .transaction-form button {
+        font-size: 14px;
+    }
+
+    .transaction-table {
+        width: 100%;
+    }
+
+    .transaction-table table {
+        font-size: 12px;
+    }
+
+    #searchInput {
+        font-size: 14px;
+    }
 }
+
