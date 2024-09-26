@@ -11,9 +11,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #FF7E79, #FFBE6A);
+    background: linear-gradient(135deg, #79c8fd, #26b1ed);
     color: #444;
 }
+
 
 header {
     position: absolute;
@@ -41,7 +42,7 @@ header {
 h1 {
     font-size: 24px;
     font-weight: bold;
-    color: #FF7E79;
+    color: #170651;
 }
 
 .container {
@@ -70,7 +71,7 @@ input {
 
 button {
     padding: 12px;
-    background-color: #FF7E79;
+    background-color: #39bfd3;
     color: white;
     border: none;
     border-radius: 8px;
@@ -81,7 +82,7 @@ button {
 }
 
 button:hover {
-    background-color: #FF4F4F;
+    background-color: #2a84d3;
 }
 
 .error-message {
