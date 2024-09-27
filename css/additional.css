@@ -1,0 +1,24 @@
+/* Sort Date Range styling */
+.sort-container {
+    display: inline-block;
+    margin-left: 10px; /* Space between search and sort dropdowns */
+}
+
+#dateRange {
+    padding: 12px 20px;
+    border-radius: 15px;
+    border: 1px solid #f7c436;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+#dateRange:focus {
+    border-color: #2081c1;
+    outline: none;
+}
+
+
+
+#filterType {
+    margin-left: 4%; /* Space between input and select */
+}

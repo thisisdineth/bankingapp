@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--Favicons-->
+    <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
-<link rel="manifest" href="./favicons/site.webmanifest">
-    <!--End favicons-->
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+    <link rel="manifest" href="./favicons/site.webmanifest">
+    <!-- End favicons -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | Petty Cash Book</title>
     <link rel="stylesheet" href="./css/db.css">
+    <link rel="stylesheet" href="./css/additional.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
 </head>
 <body>
     <!-- Navbar with logo and page name -->
@@ -28,8 +30,6 @@
         </div>
     </header>
 
-
-
     <!-- Hero Image Section -->
     <div class="hero-image">
         <img src="./images/hero.png" alt="Hero Image" />
@@ -44,16 +44,17 @@
             <h2 id="greetingMessage">Good Day, You are awesome</h2>
         </div>
     </div>
-        <!-- Main Navigation Section -->
-        <nav class="dashboard-nav">
-            <ul>
-                <li><a href="./income.html" class="nav-item">Incomes</a></li>
-                <li><a href="./spent.html" class="nav-item">Spends</a></li>
-                <li><a href="./sum.html" class="nav-item">Summary</a></li>
-            </ul>
-        </nav>
+    
+    <!-- Main Navigation Section -->
+    <nav class="dashboard-nav">
+        <ul>
+            <li><a href="./income.html" class="nav-item">Incomes</a></li>
+            <li><a href="./spent.html" class="nav-item">Spends</a></li>
+            <li><a href="./sum.html" class="nav-item">Summary</a></li>
+        </ul>
+    </nav>
 
-        <!-- Transaction Form -->
+    <!-- Transaction Form -->
     <div class="transaction-form">
         <h2>Add Transaction</h2>
         <form id="transactionForm">
@@ -75,21 +76,37 @@
             <button type="submit">Add Transaction</button>
         </form>
     </div>
-<hr>
-    <!-- Search Transactions -->
+
+    <hr>
+    <!-- Search and Filter Transactions -->
     <div class="search-container">
         <input type="text" id="searchInput" placeholder="Search by Transaction Name">
+        <select id="filterType">
+            <option value="">All Types</option>
+            <option value="Income">Income</option>
+            <option value="Spend">Spend</option>
+        </select>
     </div>
+    <div class="sort-container">
+        <label for="dateRange">Sort by Date:</label>
+        <select id="dateRange">
+            <option value="">All Dates</option>
+            <option value="today">Today</option>
+            <option value="thisWeek">This Week</option>
+            <option value="last30Days">Last 30 Days</option>
+        </select>
+    </div>
+    
 
     <!-- Display Transactions Table -->
     <div class="transaction-table">
         <table>
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Amount</th>
-                    <th>Type</th>
-                    <th>Date</th>
+                    <th onclick="sortTable(0)">Name</th>
+                    <th onclick="sortTable(1)">Amount</th>
+                    <th onclick="sortTable(2)">Type</th>
+                    <th onclick="sortTable(3)">Date</th>
                 </tr>
             </thead>
             <tbody id="transactionTableBody">
@@ -98,10 +115,12 @@
         </table>
     </div>
 
-<footer>
-    <p>&copy; 2024 Petty Cash book version 1.8 Server D.NET</p>
-</footer>
+    <footer>
+        <p>&copy; 2024 Petty Cash book version 1.8 Server D.NET</p>
+    </footer>
     <!-- JavaScript -->
     <script type="module" src="./js/db.js"></script>
+    <script src="./js/additional.js"></script>
+    <!-- Added JavaScript file for sorting and filtering -->
 </body>
 </html>
